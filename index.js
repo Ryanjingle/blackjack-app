@@ -1,18 +1,37 @@
-let firstCard = 3
-let secondCard = 9
+let firstCard = 10
+let secondCard = 4
+let hasBlackJack = false
+let isAlive = true
+let message = ""
 
-let sum = firstCard + secondCard + 10
-console.log(sum)
+let sum = firstCard + secondCard 
 
+function startGame() {
 if (sum <= 20) {
-    console.log("Do you want to draw a new card?")
+    message = "Do you want to draw a new card?"
 }
 else if (sum === 21) {
-    console.log("Congratulations!")
+    hasBlackJack = true
+    message = "Congratulations"
 }
 else {
-    console.log("You're out of the game!")
+    isAlive = false
+    message = "You're out of the game"
 }
+console.log(message)
+}
+
+
+// hasBlackJack variable - keep track of whether or not won blackjack (got 21)
+console.log(hasBlackJack)
+// another variable to keep track of whether or not player is still alive in game - isAlive
+console.log(isAlive)
+
+
+// boolean conditions
+
+
+
 //if else conditionals 
 
 //if (sum < 21) {
@@ -36,3 +55,4 @@ else {
 //else {
     //console.log("Not eligible, you have already gotten one!")
 //}
+
