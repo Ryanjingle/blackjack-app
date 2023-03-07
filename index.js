@@ -1,5 +1,6 @@
-let firstCard = 9
-let secondCard = 14
+/* let firstCard = 2
+let secondCard = 4
+let cards = [firstCard, secondCard] // order-list of items
 let sum = firstCard + secondCard 
 let hasBlackJack = false
 let isAlive = true
@@ -10,6 +11,10 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
+    renderGame()
+}
+
+function renderGame() {
 if (sum <= 20) {
     message = "Do you want to draw a new card?"
 }
@@ -23,19 +28,23 @@ else {
 }
 messageEl.textContent = message
 sumEl.textContent = "Sum: " + sum
-cardsEl.textContent = "Cards: " + firstCard + " - " + secondCard
+cardsEl.textContent = "Cards: " + cards[0] + " - " + cards[1]
 }
 
 function newCard(){
-
+    let card = 8
+    sum += card
+    renderGame()
+    console.log("Drawing a new card from the deck!")
 }
+
 
 
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
 console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
 console.log(isAlive)
-
+ */
 
 // boolean conditions
 
@@ -65,3 +74,34 @@ console.log(isAlive)
     //console.log("Not eligible, you have already gotten one!")
 //}
 
+// Arrays - ordered list of items
+
+/* let featuredPosts = [
+    "Check out my Netflix clone", 
+    "Here's code for my project", 
+    "I've just relaunched my portfolio"
+]
+
+let sportSkills = [
+    "Baseball - Advanced",
+    "Football - Advanced",
+    "Basketball - Proficient",
+    "Tennis - Basic"
+]
+
+console.log(sportSkills[2])
+
+// string, number, and boolean primitive data types
+
+let me = [
+    "Ryan",
+    25,
+    true
+]
+console.log(me[2]) */
+
+// push array
+
+let cards = [7, 4]
+cards.push(6)
+console.log(cards)
