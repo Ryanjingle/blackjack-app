@@ -1,10 +1,13 @@
-let firstCard = 10
-let secondCard = 4
+let firstCard = 9
+let secondCard = 14
+let sum = firstCard + secondCard 
 let hasBlackJack = false
 let isAlive = true
 let message = ""
-
-let sum = firstCard + secondCard 
+let messageEl = document.getElementById("message-el")
+//let sumEl = document.getElementById("sum-el") - query selector practice below, more dynamic, but need to be more specific in quotes
+let sumEl = document.querySelector("#sum-el")
+let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
 if (sum <= 20) {
@@ -18,7 +21,13 @@ else {
     isAlive = false
     message = "You're out of the game"
 }
-console.log(message)
+messageEl.textContent = message
+sumEl.textContent = "Sum: " + sum
+cardsEl.textContent = "Cards: " + firstCard + " - " + secondCard
+}
+
+function newCard(){
+
 }
 
 
