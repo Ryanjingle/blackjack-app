@@ -1,4 +1,4 @@
-let cards = [] // order-list of items
+/* let cards = [] // order-list of items
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -7,6 +7,13 @@ let messageEl = document.getElementById("message-el")
 //let sumEl = document.getElementById("sum-el") - query selector practice below, more dynamic, but need to be more specific in quotes
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
+let player = {
+    name: "Ryan",
+    chips: 145
+}
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = player.name + " $" +  player.chips
+// we then add the specific variable to the object using . //
 
 function getRandomCard() {
 let randomNumber = Math.floor(Math.random()*13) + 1
@@ -69,7 +76,7 @@ function newCard(){
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
 console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
-console.log(isAlive)
+console.log(isAlive) */
 
 // BOOLEAN CONDITONS
 //Basically just means true or false value (0,1)
@@ -312,3 +319,13 @@ if (likesDocumentaries === true || likesStartups === true) {
 function recommendMovie() {
     console.log("Hey, check out this new film we think you will like!")
 } */
+
+// Create Object (data type) - multiple variables within one data type
+// here, player is the object and it is defined by what is inside the curly brackets
+
+/* let player = {
+    name: "Ryan",
+    chips: 145
+}*/
+
+// OBJECTS //
