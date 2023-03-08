@@ -1,9 +1,7 @@
-/* let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard] // order-list of items
-let sum = firstCard + secondCard 
+let cards = [] // order-list of items
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 //let sumEl = document.getElementById("sum-el") - query selector practice below, more dynamic, but need to be more specific in quotes
@@ -11,10 +9,24 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 function getRandomCard() {
-    return (5)
+let randomNumber = Math.floor(Math.random()*13) + 1
+if (randomNumber > 10) {
+    return 10
+}
+else if (randomNumber === 1) {
+    return 11
+}
+else {
+    return randomNumber
+}
 }
 
 function startGame() {
+    isAlive = true
+    let startCard1 = getRandomCard()
+    let startCard2 = getRandomCard()
+    cards = [startCard1, startCard2]
+    sum = startCard1 + startCard2
     renderGame()
 }
 
@@ -45,7 +57,9 @@ function newCard(){
     sum += card
     cards.push(card)
     console.log(cards)
-    renderGame()
+    if (hasBlackJack === false && isAlive === true) {
+        renderGame()
+    }
 }
 
 
@@ -55,7 +69,7 @@ function newCard(){
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
 console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
-console.log(isAlive)*/
+console.log(isAlive)
 
 // BOOLEAN CONDITONS
 //Basically just means true or false value (0,1)
@@ -232,7 +246,69 @@ console.log(diceNumber) */
 
 // modify function to get answer between 1 and 6 //
 
-let diceNumber = Math.floor(Math.random()*6) + 1
-console.log(diceNumber)
+/* let diceNumber = Math.floor(Math.random()*6) + 1
+console.log(diceNumber) */
 
 // what this is doing is the same process as previous, except adding one to the answer. //
+
+// turn it into a function //
+
+/* function rollDice() {
+    return Math.floor(Math.random()*6) + 1
+}
+let dice = rollDice()
+console.log(dice)
+// or //
+function rollDice() {
+    let randomNumber = Math.floor(Math.random()*6) + 1
+    return randomNumber
+}
+console.log(rollDice()) */
+
+// LOGICAL OPERATORS 
+
+
+/* let hasCompletedCourse = true
+let givesCertificate = true
+
+if (hasCompletedCourse === true) {
+    if (givesCertificate === true) {
+        generateCertificate()
+    }
+}
+// a more efficient way of doing this:
+
+if (hasCompletedCourse === true && givesCertificate === true) {
+    generateCertificate()
+}
+
+function generateCertificate() {
+
+    console.log("Generating Certificate...")
+} */
+
+/* let hasSolvedChallenge = false
+let hasHintsLeft = false
+
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution()
+}
+
+function showSolution() {
+    console.log("Showing the solution...")
+} */
+
+// OR operator //
+// The point of this is to execute a function based on whether or not the user likes this OR that - they don't have to like both
+// So, if they press execute one of the two variables, the function will execute regardless
+
+/* let likesDocumentaries = true
+let likesStartups = false
+
+if (likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+} */
