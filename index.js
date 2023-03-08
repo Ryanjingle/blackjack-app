@@ -1,5 +1,5 @@
-/* let firstCard = 2
-let secondCard = 4
+/* let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard] // order-list of items
 let sum = firstCard + secondCard 
 let hasBlackJack = false
@@ -10,11 +10,22 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
+function getRandomCard() {
+    return (5)
+}
+
 function startGame() {
     renderGame()
 }
 
 function renderGame() {
+
+cardsEl.textContent = "Cards: "
+for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " "
+}    
+
+sumEl.textContent = "Sum: " + sum
 if (sum <= 20) {
     message = "Do you want to draw a new card?"
 }
@@ -27,25 +38,24 @@ else {
     message = "You're out of the game"
 }
 messageEl.textContent = message
-sumEl.textContent = "Sum: " + sum
-cardsEl.textContent = "Cards: " + cards[0] + " - " + cards[1]
 }
 
 function newCard(){
-    let card = 8
+    let card = getRandomCard()
     sum += card
-    renderGame()
     cards.push(card)
     console.log(cards)
+    renderGame()
 }
+
+
 
 
 
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
 console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
-console.log(isAlive) */
-
+console.log(isAlive)*/
 
 // BOOLEAN CONDITONS
 //Basically just means true or false value (0,1)
@@ -160,17 +170,69 @@ for (let i = 0; i < cards.length; i += 1) {
 } */
 // another syntax option we have instead of doing +=, is to use ++. Will do same thing.
 
-let sentence = ["Hello", "my", "name", "is", "Ryan"] 
+/* let sentence = ["Hello", "my", "name", "is", "Ryan"] 
 
 let greetingsEl = document.getElementById("greeting-el")
 
 for (let i = 0; i < sentence.length; i += 1) {
     greetingsEl.textContent += sentence[i] + " "
     console.log(sentence[i])
-}
+} */
 
 //explanation of above: we are first defining i as 0 (the first word in the array), 
 //we are then saying that it needs to end once it reaches the entire length of the array.
 //then, we are saying it needs to go through and check each array component one at a time.
 //the text content is displaying this process onto the page by saying the text content =
 //the sentence array component one at a time(i), then increments (+=) until array is complete.
+
+// RETURNING VALUES IN FUNCTIONS
+/* function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    }
+    else if (player2Time < player1Time) {
+        return player2Time
+    }
+    else {
+        return player1Time
+    }
+}
+
+let fastestRace = getFastestRaceTime()
+console.log(fastestRace) */
+
+/* let player1Time = 102
+let player2Time = 107
+
+function totalRaceTime() {
+    return player1Time + player2Time
+}
+let totalTime = totalRaceTime()
+console.log(totalTime) */
+
+// GET RANDOM NUMBERS
+
+/* let randomNumber = Math.random()
+console.log(randomNumber) */
+
+// Multiply method - multipies the random answer after its execution //
+
+/* let randomNumber = Math.random() * 6
+console.log(randomNumber) */
+
+// Floor method - removes the decimal //
+
+/* let flooredNumber = Math.floor(3.453224)
+console.log(flooredNumber) */
+
+// combining both methods to make dice - sets the random * 6 as a floor(without decimal) //
+
+/* let diceNumber = Math.floor(Math.random()*6)
+console.log(diceNumber) */
+
+// modify function to get answer between 1 and 6 //
+
+let diceNumber = Math.floor(Math.random()*6) + 1
+console.log(diceNumber)
+
+// what this is doing is the same process as previous, except adding one to the answer. //
