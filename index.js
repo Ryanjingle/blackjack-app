@@ -1,4 +1,4 @@
-/* let cards = [] // order-list of items
+let cards = [] // order-list of items
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -58,25 +58,27 @@ else {
 }
 messageEl.textContent = message
 }
+// bug occuring at if logical operator, cant figure out why
+// after new card/start game is pressed a number of times, new card function won't execute at all. 
 
 function newCard(){
+    if (isAlive === true && hasBlackJack === false) {
     let card = getRandomCard()
     sum += card
     cards.push(card)
-    console.log(cards)
-    if (hasBlackJack === false && isAlive === true) {
-        renderGame()
-    }
+    renderGame()
+}
 }
 
 
 
 
 
+
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
-console.log(hasBlackJack)
+//console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
-console.log(isAlive) */
+//console.log(isAlive)
 
 // BOOLEAN CONDITONS
 //Basically just means true or false value (0,1)
@@ -329,3 +331,46 @@ function recommendMovie() {
 }*/
 
 // OBJECTS //
+// Store data in-depth - known as a complex data type.
+// We can use numbers, strings, booleans (primitive data types) to store data within an object
+// Also known as key-value pairs !
+
+/* let course = {
+    title: "Learn CSS Grid for free", //'title' is the key, and the string is the value.
+    lessons: 16,
+    creator: "Ryan Cooper Engel",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+
+}
+
+console.log(course.tags) */
+
+
+// Think of the dot notation like a path, as the computer scans left to right.
+
+/* let castle = {
+    title: "Live like a King in my Castle",
+    guests: 4,
+    bedroom: 1,
+    review: ["4.95", "(1268 reviews)"],
+    isSuperhost: true
+}
+console.log(castle.guests)
+console.log(castle.review) */
+
+// METHODS WITHIN AN OBJECT // - method is a function that is attached to an object. 
+// the 'document.getElementById() is also an example of a method (function) attached to an object (document)
+
+/* let player = {
+    name: "Ryan",
+    isSexy: true,
+    sayHello: function() {
+        console.log("Hello!") 
+    }
+}
+player.sayHello() */
+
+// now, whenever that specific path is called upon, the function will run
