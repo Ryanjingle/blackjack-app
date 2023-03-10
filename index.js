@@ -74,7 +74,6 @@ function newCard(){
 
 
 
-
 // hasBlackJack variable - keep track of whether or not won blackjack (got 21)
 //console.log(hasBlackJack)
 // another variable to keep track of whether or not player is still alive in game - isAlive
@@ -374,3 +373,130 @@ console.log(castle.review) */
 player.sayHello() */
 
 // now, whenever that specific path is called upon, the function will run
+
+
+// FINAL PRACTICE //
+
+
+// function and object
+/* let person = {
+    name: "Ryan",
+    age: 25,
+    country: "United States"
+}
+
+function logData() {
+    console.log(person.name + " is " + person.age + " years old and lives in the " + person.country)
+}
+logData() */
+
+
+//if else
+/* et age = 15 
+
+if (age < 6) {
+    console.log("free")
+} 
+else if (age < 18) {
+    console.log("child discount")
+}
+else if (age < 27) {
+    console.log("student discount")
+}
+else if (age < 67) {
+    console.log("full price")
+}
+else {
+    console.log("senior citizen discount")
+} */
+
+//loops and arrays
+
+/* let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+
+console.log("The top 5 largest countries in the world are: ")
+for (i = 0; i < largeCountries.length; i++) {
+    console.log("- " + largeCountries[i])
+} */
+
+//push, pop unshift, shift challenge
+
+/* let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monacco"]
+
+largeCountries.shift()
+largeCountries.unshift("China")
+largeCountries.pop()
+largeCountries.push("Pakistan")
+
+
+console.log(largeCountries) */
+
+//logical operators (non-boolean variables)
+
+/* let dayOfMonth = 13
+let weekDay = "Friday"
+
+if (dayOfMonth === 13 && weekDay === "Friday") {
+    hiThere()
+}
+
+function hiThere() {
+    console.log("hi")
+} */
+
+// instead of writing another funciton you could have just done
+
+/* if (dayOfMonth === 13 && weekDay === "Friday") {
+    console.log("hi")
+} */
+
+
+//random numbers
+
+
+/* let hands = ["rock", "paper", "scissors"]
+
+function randomGame() {
+    let hand = hands[Math.floor(Math.random()*hands.length)]
+    console.log(hand)
+}
+randomGame() */
+
+//Instead of adding a length as we did with numbers in the actual project (13),
+//we use the same length function to indicate what items within the array to consider.
+//to console log this, we could have also done return hand within the function, then console logged the function outside of the function to call it. Ex.
+
+/* function randomGame() {
+    let hand = hands[Math.floor(Math.random()*hands.length)]
+    return hand
+}
+console.log(randomGame()) */
+
+//another way to do this is to define the return value rather than the new variable. Ex.
+
+/* function randomGame() {
+    let hand = Math.floor(Math.random()*3) 
+    return hands[hand] // here we are pointing to the array, rather than above.
+}
+console.log(randomGame()) */
+
+
+//sorting fruits
+
+/* let fruit = ["|", "-", "|", "|", "-"]
+
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+
+function sortFruit() {
+for (let i = 0; i < fruit.length; i++) {
+    if (fruit[i] === "-") {
+        orangeShelf.textContent += "-"
+    }
+    else if (fruit[i] === "|") {
+        appleShelf.textContent += "|"
+    }
+}
+}
+sortFruit() */
